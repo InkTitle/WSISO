@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#090D16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="30%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Bright Gold Highlight -->
+    <linearGradient id="brightGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Soft Ambient Glow -->
+    <radialGradient id="goldGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.35" />
+      <stop offset="70%" stop-color="#F59E0B" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container (App icon / Favicon profile) -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Fine Gold Border -->
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#goldGrad)" stroke-width="6" opacity="0.85" />
+
+  <!-- Ambient Glow in Center -->
+  <circle cx="256" cy="256" r="210" fill="url(#goldGlow)" />
+
+  <!-- Group with Drop Shadow -->
+  <g filter="url(#subtleShadow)">
+    
+    <!-- Outer Book Base / Spine Wings -->
+    <path d="M256 370 C220 348 165 344 110 354 L110 162 C165 152 220 156 256 178 C292 156 347 152 402 162 L402 354 C347 344 292 348 256 370 Z" 
+          fill="#1E293B" 
+          stroke="url(#goldGrad)" 
+          stroke-width="7" 
+          stroke-linejoin="round" />
+
+    <!-- Left Book Page Group -->
+    <path d="M256 352 C218 332 168 328 124 336 L124 176 C168 168 218 172 256 192 Z" 
+          fill="#0F172A" 
+          stroke="#475569" 
+          stroke-width="2" />
+
+    <!-- Left Page Accent Lines (Blueprint Grid Text) -->
+    <line x1="145" y1="210" x2="235" y2="219" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+    <line x1="145" y1="238" x2="235" y2="247" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <line x1="145" y1="266" x2="235" y2="275" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <line x1="145" y1="294" x2="205" y2="300" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Right Book Page Group -->
+    <path d="M256 352 C294 332 344 328 388 336 L388 176 C344 168 294 172 256 192 Z" 
+          fill="#0F172A" 
+          stroke="#475569" 
+          stroke-width="2" />
+
+    <!-- Right Page Accent Lines (Chart & Blueprints) -->
+    <line x1="277" y1="219" x2="367" y2="210" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round" opacity="0.9" />
+    <line x1="277" y1="247" x2="367" y2="238" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <line x1="277" y1="275" x2="367" y2="266" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <line x1="277" y1="300" x2="337" y2="294" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+
+    <!-- Center Book Spine Line -->
+    <path d="M256 178 L256 370" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Bookmark Ribbon in Center (Rich Amber) -->
+    <polygon points="256,160 274,160 274,250 256,236 238,250 238,160" fill="url(#brightGold)" filter="url(#subtleShadow)" />
+
+    <!-- Top Badge Sparkle / Star (Digital Excellence) -->
+    <polygon points="256,92 263,114 285,121 263,128 256,150 249,128 227,121 249,114" fill="url(#brightGold)" />
+  </g>
+</svg>
